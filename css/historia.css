@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Roboto+Slab&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(23, 33, 122);
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.logo {
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    font-size: 40px;
+    padding: 0 40px;
+    font-weight: bold;
+}
+
+ul {
+    display: flex;
+    margin-right: 60px;
+}
+
+ul li {
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+ul a li {
+    padding: 7px 13px;
+    font-size: 18px;
+    list-style: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li:hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: .4s ease-in-out;
+}
+
+ul li:active {
+    background-color: rgba(228, 27, 27);
+    transition: .1s linear;
+}
+.mesi2 {
+    height: 500px;
+    background: linear-gradient(rgba(5, 7, 12, 0.70), rgba(5, 7, 12, 0.70)), url("../img/historia.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: contain;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+}
+section{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+}
+.mitad{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    /*para que todo elemento que este afuera del contenedoir se oculte y  no aparezca*/
+    overflow: hidden;
+    background: rgb(180, 206, 247, 0.4);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+.mitad:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    /*que cada tarjeta se traslade de manera vetical a -3%*/
+    transform: translateY(-3%);
+}
+.mitad img{
+    width: 100%;
+    height: 210px;
+}
+.mitad .contenido{
+    padding: 15px;
+    text-align: center;
+}
+.mitad .contenido p{
+    /*esto es para espacio entre lineas*/
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+.mitad .contenido h3{
+    /*para reducir el tono de la letra*/
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.mitad .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: rgb(23, 33, 122);
+    border: 1px solid rgb(23, 33, 122);
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.mitad .contenido a:hover{
+    background: rgb(23, 33, 122);
+    color: #fff;
+}
+@media screen and (max-width:500px) {
+    .section{
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        padding: 30px 0px;
+    }
+}
+footer {
+    background-color: rgb(0, 0, 0);
+}
+footer .pie {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    /*que se repita 3 columnas y que ocupe todo el ancho*/
+    grid-template-columns: repeat(3, 1fr);
+    /*margen a la columna*/
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie .nosotros {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.pie .nosotros h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie .nosotros p {
+    color: #efefef;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.pie .redes h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie .redes a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-left: 18px;
+    background-color: black;
+    text-align: center;
+}
+
+.pie .redes a:hover {
+    color: aqua;
+}
+
+.pie .elaborado {
+    text-align: center;
+    color: #efefef;
+    font-size: 20px;
+}
+
+.pie .elaborado h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+footer .pagina {
+    font-size: 20px;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+}
+@media screen and (max-width:800px) {
+    footer .pie {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 30px 0px;
+    }
+}
